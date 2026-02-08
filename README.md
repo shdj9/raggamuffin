@@ -29,6 +29,12 @@ J’ai affiché systématiquement pour mes tests le « podium » des 5 recette
 
 Génération : Orchestration via Mistral AI avec un prompt définissant le persona de Winston Muffin. Il s'efforce de renvoyer les recettes les plus pertinentes parmi celles du contexte. 
 
+### Observations : 
+
+Au départ, l'objectif était de fixer les garde-fous, pour que le chef comprenne qu'il ne cuisinait que des muffins. À cause des refus stricts que j'avais mis, j'ai obtenu des réponses trop rigides. Si mes prompts invitant le chef à la rigueur étaient efficaces pour la précision, ils étaient frustrants pour l'utilisateur, le Chef perdait son côté sympathique en devenant trop binaire. À l'inverse, après des modifications, le chef a eu tendance à proposer des recettes pour "consoler" l'utilisateur, qui étaient trop éloignées de la demande. 
+
+Le prompt final combine la vibe Reggae pour le persona et une logique de sélection selon la présence des ingrédients demandés dans les recettes obtenues par le RAG. Les réponses ont dues être formatées pour corriger les problèmes d'affichage (notamment pour forcer des sauts de ligne).
+
 # 4. Alternative détaillée à la fin de la partie Optimisation
 
 # ↗️ Optimisation 
