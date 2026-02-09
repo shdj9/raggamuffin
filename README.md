@@ -48,6 +48,8 @@ Le système a montré des limites sur certaines requêtes, avec un biais de rép
 ### 3. Alternative : Pondération par "Ingrédients principaux"
 Pour améliorer les résultats du RAG, j'ai essayé une autre approche : l'utilisation de Mistral en amont pour identifier les 2 ou 3 ingrédients principaux de chaque recette. Le fichier "muffins_enriched_dataset.json" contient ces ingrédients principaux et l'embedding associé. 
 
+NB : Pour exécuter le notebook, il faut au début indiquer votre clé Mistral, je n'ai pas pu laisser la mienne sur git.
+
 Dans l'embedding, ces ingrédients ont été répétés trois fois afin d'augmenter leur poids vectoriel. Bien que les résultats soient globalement équivalents à la version standard, cette méthode a montré une légère amélioration sur des requêtes très spécifiques dont les ingrédients étaient auparavant noyés dans la liste globale. 
 
 Les fonctions liées à cette expérimentation sont conservées en fin de notebook à titre de documentation technique. 
